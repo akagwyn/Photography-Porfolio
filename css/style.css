@@ -1,0 +1,81 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #131313;
+  height: 100%;
+}
+
+header {
+  background-color: #131313;
+  font-size: 3vh;
+  padding: 2rem 0 2rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+header .title {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  margin: auto;
+}
+
+header .title b {
+  font-weight: 700;
+}
+
+.gridPhotos {
+  --gap: .7rem;
+  --num-cols: 2;
+  --row-height:30rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: var(--gap);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.gridPhotos > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .gridPhotos {
+    --row-height:60rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gridPhotos {
+    margin: 0 10rem 0 10rem;
+    --num-cols: 4;
+    --row-height:60rem;
+  }
+  .itemTwoColumn {
+    grid-column: span 2;
+  }
+  .itemThreeRow {
+    grid-row: span 3;
+  }
+  .itemTwoRow {
+    grid-row: span 2;
+  }
+}
+/*# sourceMappingURL=style.css.map */

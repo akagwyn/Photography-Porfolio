@@ -1,0 +1,31 @@
+@media (min-width: 768px) {
+
+    
+    .gridPhotos {
+        
+        --row-height:60rem;
+    }
+
+    
+    
+}
+@media (min-width: 1440px) {
+    .gridPhotos {
+        margin: 0 10rem 0 10rem;
+        --num-cols: 4;
+        --row-height:60rem;
+    }
+    
+    .itemTwoColumn {
+        grid-column: span 2;
+    }
+    
+    .itemThreeRow {
+        grid-row: span 3;
+    }
+    
+    .itemTwoRow {
+         grid-row: span 2;
+    }
+    
+}
