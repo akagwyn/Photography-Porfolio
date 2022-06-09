@@ -25,6 +25,12 @@
         }
     }
 
+    .arrow {
+        padding: 34vh 0 6vh 0;
+        width: 4rem;
+        filter: invert(16%) sepia(76%) saturate(2567%) hue-rotate(345deg) brightness(89%) contrast(96%);
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -46,5 +52,6 @@
     .twoRow {
          grid-row: span 2;
     }
+    
     
 }
