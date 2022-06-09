@@ -11,21 +11,39 @@ html {
 
 body {
   background-color: #131313;
-  height: 100%;
+  font-family: 'Playfair Display';
+}
+
+nav {
+  background-color: #131313;
+  text-align: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  font-size: 2vh;
+  position: fixed;
+  top: 0;
+}
+
+.navItem {
+  text-align: center;
+  width: 22vw;
+  margin: 1.5rem;
 }
 
 header {
-  background-color: #131313;
-  font-size: 3vh;
-  padding: 2rem 0 2rem 0;
-  position: -webkit-sticky;
-  position: sticky;
+  text-align: center;
+  margin: 45vh  10vw;
 }
 
 header .title {
+  font-size: 3vh;
   color: #ffffff;
   text-align: center;
-  font-family: 'Playfair Display';
   font-weight: 400;
   margin: auto;
 }
@@ -47,18 +65,54 @@ header .title b {
       grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: var(--row-height);
   gap: var(--gap);
+  overflow: hidden;
 }
 
-.gridPhotos > img {
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .gridPhotos {
     --row-height:60rem;
+  }
+  img:hover {
+    -webkit-transition: .5s;
+    transition: .5s;
+    opacity: 60%;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  nav {
+    padding: 0 2rem 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    color: white;
+    font-size: 2vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  nav .navItem {
+    width: auto;
   }
 }
 
@@ -66,15 +120,16 @@ header .title b {
   .gridPhotos {
     margin: 0 10rem 0 10rem;
     --num-cols: 4;
-    --row-height:60rem;
+    --row-height:auto;
+    overflow: hidden;
   }
-  .itemTwoColumn {
+  .twoColumn {
     grid-column: span 2;
   }
-  .itemThreeRow {
+  .threeRow {
     grid-row: span 3;
   }
-  .itemTwoRow {
+  .twoRow {
     grid-row: span 2;
   }
 }

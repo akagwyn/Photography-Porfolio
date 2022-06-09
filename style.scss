@@ -1,4 +1,5 @@
 
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -12,21 +13,41 @@ html {
 
 body {
     background-color: #131313;
-    height: 100%;
+    font-family:'Playfair Display';
+    
+    
+}
+
+nav {
+    background-color:#131313;
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 2vh;
+    position: fixed;
+    top: 0;
+    
+}
+
+.navItem {
+    text-align: center;
+    width: 22vw;
+    margin: 1.5rem;
     
 }
 
 header { 
-    background-color: #131313;
-    font-size: 3vh;
-    padding: 2rem 0 2rem 0;
-    position: sticky;
+    text-align: center;
+    margin:45vh  10vw ;
+    
     
 
     .title {
+        font-size: 3vh;
         color: #ffffff;
         text-align: center;
-        font-family:'Playfair Display';
         font-weight: 400;
         margin: auto;
 
@@ -34,10 +55,11 @@ header {
             font-weight: 700;
         }
     }
+
 }
 
 
-.gridPhotos {
+.gridPhotos{
     
     --gap: .7rem;
     --num-cols: 2;
@@ -48,25 +70,26 @@ header {
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
     gap: var(--gap);
+    overflow: hidden;
+    
 }
 
-.gridPhotos > img {
+.item {
+    display: flex;
+    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    overflow: hidden;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @import "media";
+@import "txt";
 
