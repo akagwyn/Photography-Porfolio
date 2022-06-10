@@ -10,23 +10,28 @@ html {
 }
 
 body {
-  background: #131313;
-  background: -webkit-gradient(linear, left top, left bottom, from(#131313), to(black));
-  background: linear-gradient(180deg, #131313 0%, black 100%);
+  /* background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+  background: #68a2ba;
+  background: -webkit-gradient(linear, left top, right top, from(#68a2ba), color-stop(50%, #c23179), to(#b8313f));
+  background: linear-gradient(90deg, #68a2ba 0%, #c23179 50%, #b8313f 100%);
   background-color: #131313;
   font-family: 'Playfair Display';
 }
 
 nav {
-  background-color: #131313;
+  -webkit-animation: fadeIn 5s;
+          animation: fadeIn 5s;
+  -webkit-box-shadow: 0px 5px 50px 23px rgba(0, 0, 0, 0.33);
+          box-shadow: 0px 5px 50px 23px rgba(0, 0, 0, 0.33);
+  background-color: black;
+  width: auto;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: white;
-  font-size: 2vh;
   position: fixed;
   top: 0;
 }
@@ -40,8 +45,6 @@ nav {
   text-align: center;
   width: 20vw;
   margin: 1.5rem;
-  -webkit-animation: fadeIn 5s;
-          animation: fadeIn 5s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -98,13 +101,14 @@ header .title b {
 header .arrow {
   -webkit-animation: fadeIn 5s;
           animation: fadeIn 5s;
-  padding: 40vh 0 6vh 0;
+  padding: 40vh 0 10vh 0;
   width: 4rem;
   -webkit-filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(85%) contrast(103%);
           filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(85%) contrast(103%);
 }
 
 .gridPhotos {
+  background-color: #131313;
   --gap: .7rem;
   --num-cols: 2;
   --row-height:30rem;
@@ -166,17 +170,11 @@ img {
   nav .navItem {
     width: auto;
   }
-  .arrow {
-    padding: 34vh 0 6vh 0;
-    width: 4rem;
-    -webkit-filter: invert(16%) sepia(76%) saturate(2567%) hue-rotate(345deg) brightness(89%) contrast(96%);
-            filter: invert(16%) sepia(76%) saturate(2567%) hue-rotate(345deg) brightness(89%) contrast(96%);
-  }
 }
 
 @media (min-width: 1440px) {
   .gridPhotos {
-    margin: 0 10rem 0 10rem;
+    padding: 5rem 12rem 0 12rem;
     --num-cols: 4;
     --row-height:auto;
     overflow: hidden;

@@ -25,17 +25,11 @@
         }
     }
 
-    .arrow {
-        padding: 34vh 0 6vh 0;
-        width: 4rem;
-        filter: invert(16%) sepia(76%) saturate(2567%) hue-rotate(345deg) brightness(89%) contrast(96%);
-    }
-
 }
 
 @media (min-width: 1440px) {
     .gridPhotos {
-        margin: 0 10rem 0 10rem;
+        padding: 5rem 12rem 0 12rem;
         --num-cols: 4;
         --row-height:auto;
         overflow: hidden;
