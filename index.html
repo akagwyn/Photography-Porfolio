@@ -8,76 +8,98 @@
     <link rel="stylesheet" href="css/imagehover.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <title>Gwyn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>IVXN</title>
+    <link rel="icon" type="image/x-icon" href="/icons/X.png">
 </head>
 
 <body>
 
     <nav>
-        <button type="button" class="navItem">Home</button>
-        <button class="navItem">Colecciones</button>
-        <button class="navItem">Contacto</button>
+        
+        <button class="navItem">COLECCIONES</button>
+        <button onclick=(window.location.href)='#contact' class="navItem">CONTACTO</button>
     </nav>
-    <div class="xd">
     <header>
-        <div class="title">IVAN <b>GWYN</b> HUGHES</div>
-        <img src="./icons/downArrow.svg" class="arrow"/>
+        <div class="title"><b>IVXN</b><hr></div>
+        <p class="subtitle">FOTOGRAFIA</p>
+        <buttton onclick=(window.location.href)='#gridPhotos' "><img src="./icons/downArrow2.svg" class="arrow"/></buttton>
     </header>
     
-    <div class="gridPhotos">
+    <div id="gridPhotos" class="gridPhotos">
         <div class="item twoColumn" >
             <img src="/images/rosa1.jpg" alt="Pink World">
-            
         </div>
         <div class="item">
-            <img src="/images/biblio2.jpg" alt="Steel and Concrete">
+            <img src="/images/majko.jpg" alt="Black and White">
         </div>
-        <div class="item twoRow">
+        <div class="item twoRow twoColumn">
             <img src="/images/aeropuertoAvion.jpg" alt="Glow">
         </div>
         <div class="item twoRow">
             <img src="/images/ediRed.jpg" alt="Experimentalish">
         </div>
-        <div class="item twoRow twoColumn">
-            <img src="/images/majko.jpg" alt="Black and White">
-        </div>
         <div class="item">
             <img src="/images/edi5.jpg" alt="Glow">
         </div>
-        <div class="item">
-            <img src="/images/plano3.jpg" alt="Black and White">
+        <div class="item twoRow twoColumn">
+            <img src="/images/dunas.jpg" alt="Black and White">
+        </div>
+        <div class="item threeRow">
+            <img src="/images/pasos2.jpg" alt="Steel and Concrete">
         </div>
         <div class="item twoRow twoColumn">
-            <img src="/images/museo5.jpg" alt="Glow">
+            <img src="/images/barco.jpg" alt="Glow">
         </div>
         <div class="item">
-            <img src="/images/edi1.jpg" alt="">
+            <img src="/images/maskedRetrato.jpg" alt="">
         </div>
         <div class="item twoRow">
             <img src="/images/fasoAbajo.jpg" alt="">
         </div>
         <div class="item">
-            <img src="/images/edi3.jpg" alt="">
+            <img src="/images/verde.jpg" alt="">
         </div>
-        <div class="item">
-            <img src="/images/edi6.jpg" alt="">
+        <div class="item twoRow">
+            <img src="/images/expRojoAbajo.jpg" alt="">
         </div>
         <div class="item twoColumn threeRow">
             <img src="/images/ediRedPunta.jpg" alt="">
         </div>
-        <div class="item twoColumn threeRow">
-            <img src="/images/cbaAereo.jpg" alt="">
+        <div class="item twoRow">
+            <img src="/images/escalera.jpg" alt="">
         </div>
-        <div class="item">
-            <img src="/images/playa2.jpg" alt="">
+        <div class="item twoColumn">
+            <img src="/images/cbaMont.jpg" alt="">
         </div>
         <div class="item">
             <img src="/images/playa1.jpg" alt="">
         </div>
+        <div class="item twoColumn">
+            <img src="/images/amanecerPlaya.jpg" alt="">
+        </div>
+        <div class="item twoColumn">
+            <img src="/images/aca.jpg" alt="">
+        </div>
         
     </div>
+    <div id="contact" class="contactBackground">
+        <div class="contact">
+            <div class="contactHeader">CONTACTO</div>
+            <form class="contactBody">
+                <input type="name" class="contactBodyName" placeholder="Nombre" />
+                <input type="email" class="contactBodyEmail" placeholder="Email" />
+                <textarea type="text" class="contactBodyMessage" placeholder="Mensaje"></textarea>
+                <button class="contactBodyButton"><b>ENVIAR</b></button>
+            </form>
+        </div>
     </div>
+
+    <footer>
+        <ul>
+            <li></li>
+        </ul>
+    </footer>
     <script src="/app.js"></script>
     
 </body>

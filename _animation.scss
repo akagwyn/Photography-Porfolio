@@ -3,3 +3,22 @@
     100% {opacity: 1;}
 }
 
+.arrow:hover {
+  transition-duration: 0.5s;
+  width: 4.5rem;
+  transform: translate( 0rem, 0.5rem);
+  opacity: 100%;
+
+
+&:active {
+  opacity: 100%;
+  transition-duration:0.2s;
+  transform: translate( 0rem, 0.9rem);
+}
+}
+
+img:hover {
+  transition: .5s;
+  opacity: 60%;
+  transform: scale(1.02);
+}

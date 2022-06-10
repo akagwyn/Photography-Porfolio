@@ -1,40 +1,11 @@
 @media (min-width: 768px) {
     
     .gridPhotos {
-        --row-height:60rem;
+        padding: 6rem 9rem 6rem 9rem;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;
     }
 
-    img:hover {
-        transition: .5s;
-        opacity: 60%;
-        transform: scale(1.02);
-    } 
-
-    nav {
-        
-        padding: 0 2rem 0 2rem;
-        display: flex;
-        justify-content: flex-start;
-        color: white;
-        font-size: 2vh;
-        position: sticky;
-        top: 0;
-
-        .navItem {
-            width: auto;
-        }
-    }
-
-}
-
-@media (min-width: 1440px) {
-    .gridPhotos {
-        padding: 5rem 12rem 0 12rem;
-        --num-cols: 4;
-        --row-height:auto;
-        overflow: hidden;
-    }
-    
     .twoColumn {
         grid-column: span 2;
     }
@@ -46,6 +17,41 @@
     .twoRow {
          grid-row: span 2;
     }
+
     
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        position: fixed;
+        top:0;
+        
+        .navItem {
+            width: auto;
+            font-size: 1.5vh;
+            margin: 1rem 2rem 1rem 2rem;
+        }
+    }
+    .arrow {
+        margin: 3vh 0 18vh 0;
+        height: 10rem;
+    }
     
+    .contactBackground {
+        padding-bottom: 5rem;
+    }
+    .contact {
+        width: 60rem;
+        margin-inline: auto;
+
+        .contactBodyMessage {
+            min-height: 20rem;
+        }
+    
+        .contactBodyName, .contactBodyEmail, .contactBodyMessage, .contactBodyButton {
+            width: 90%;
+        }
+    }
+
+    
+
 }

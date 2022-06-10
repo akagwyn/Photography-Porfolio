@@ -1,4 +1,5 @@
-
+@import "animation";
+@import "txt";
 
 * {
     box-sizing: border-box;
@@ -8,51 +9,68 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+
+    &:active {
+        color: #cfcfcf
+    }
 }
 
 
 body {
     /* background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
-    background: rgb(104,162,186);
-    background: linear-gradient(90deg, rgba(104,162,186,1) 0%, rgba(194,49,121,1) 50%, rgba(184,49,63,1) 100%);
+    /* background: rgb(104,162,186);
+    background: linear-gradient(90deg, #68a2ba 0%, #c23179 50%, #b8313f 100%); */
+    background: rgb(62,57,25);
+    background: linear-gradient(0deg, rgba(62,57,25,1) 0%, rgba(236,208,184,1) 100%);
+    background: rgb(63,89,102);
+    background: linear-gradient(90deg, rgba(63,89,102,1) 0%, rgba(236,208,184,1) 100%);
+    background: rgb(144,205,228);
+    background: linear-gradient(90deg, rgba(144,205,228,1) 0%, rgba(144,222,170,1) 50%, rgba(233,189,153,1) 100%);
     background-color: #131313;
-    font-family:'Playfair Display';
+    font-family: 'Playfair Display SC', serif;
 }
 
 nav {
-    animation: fadeIn 5s;
+    z-index: 90;
     box-shadow: 0px 5px 50px 23px rgba(0,0,0,0.33);
-    background-color:rgb(0, 0, 0);
-    width: auto;
+    background-color:#131313;
+    width: 100%;
+    position: fixed;
+    top: 0;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    position: fixed;
-    top: 0;
+    
+    .navItem {
+        font-size: 1.9;
+        font-family: 'Playfair Display SC', serif;
+        color: #ffffff;
+        border: none;
+        background: none;
+        text-align: center;
+        width:auto;
+        margin: 1rem 0 1rem 0;
+        
+        &:active {
+            color: #cfcfcf
+        }
+    }
     
 }
 
-.navItem {
-    font-size: 2vh;
-    font-family:'Playfair Display';
-    color: rgb(255, 255, 255);
-    border: none;
-    background: none;
-    text-align: center;
-    width: 20vw;
-    margin: 1.5rem;
-    
-}
-
-@import "animation";
 
 .xd {
     overflow: hidden;
 }
 
 header { 
-    
+    animation: fadeIn 2s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,43 +78,51 @@ header {
     margin:45vh 0vw 0 0vw;
     
     .title {
-        animation: fadeIn 5s;
-        font-size: 3vh;
-        color: #ffffff;
+        
+        font-size: 4rem;
+        color: #000000;
         text-align: center;
         font-weight: 400;
         margin: auto;
+        padding: 0 0 .5rem 0;
 
         b {
             font-weight: 700;
         }
-    }
 
+    }
+    
+    hr {
+        border: 1px solid rgb(0, 0, 0);
+        height: 1px;
+        color: rgb(0, 0, 0);
+        
+    }
+    .subtitle {
+        font-size: 1.3rem;
+        color: #000000;
+        font-weight: 700;
+    }
     .arrow {
-        animation: fadeIn 5s;
-        padding: 40vh 0 10vh 0;
-        width: 4rem;
-        filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(85%) contrast(103%);
-      
+        padding: 0.5rem;
+        margin: 35vh 0 10vh 0;
+        width: 5rem;
+        height: 5rem;
     }
-
 }
 
+// GALERIA DE FOTOS
 
 .gridPhotos{
-    
+    z-index: 1;
     background-color: #131313;
-    --gap: .7rem;
-    --num-cols: 2;
-    --row-height:30rem;
     box-sizing:border-box;
-    padding: var(--gap);
+    padding: 0.5rem;
     display:grid;
-    grid-template-columns: repeat(var(--num-cols), 1fr);
-    grid-auto-rows: var(--row-height);
-    gap: var(--gap);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:auto;
+    gap: 0.5rem;
     overflow: hidden;
-    
 }
 
 .item {
@@ -106,15 +132,84 @@ header {
     padding: 0;
     overflow: hidden;
 }
+
 img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    overflow: hidden;
+    cursor: pointer;
+}
 
+
+// SECCION DE CONTACTO
+
+.contactBackground {
+    background-color: #131313;
+}
+
+.contact {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    padding: 2rem 0 2rem 0;
+
+    .contactHeader {
+        font-family: 'Playfair Display SC', serif;
+        color: #ffffff;
+        font-weight: 700;
+        padding: 0rem 0 .5rem 0;
+        font-size: 2em;
+        
+    }
+
+    textarea {
+        resize: vertical;
+    }
+    
+    .contactBodyName, .contactBodyEmail, .contactBodyMessage, .contactBodyButton {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1rem;
+        width: 100%;
+        border-left: none;
+        border-top:none;
+        border-right: none;
+        border-width: 1px;
+        color: #ffffff;
+        border-color: #ffffff;
+        background: none;
+
+        &:focus {
+            border: none;
+        }
+    }
+
+
+
+    .contactBodyMessage {
+        height: 12rem;
+        min-height: 5rem;
+    }
+
+    .contactBodyButton {
+        color: #ffffff;
+        border: none;
+        
+        &:active {
+            color: #cfcfcf;
+        }
+    }
+}
+
+// FOOTER
+
+footer{
+    background-color: #131313;
+    padding: 1rem
 }
 
 @import "media";
-@import "txt";
+
 
