@@ -48,6 +48,27 @@ img:hover {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 1.6em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: .5em;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-left: 0.4em solid #0e0e0e;
+  border-right: 0.4em solid #0e0e0e;
+  border-radius: .68em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

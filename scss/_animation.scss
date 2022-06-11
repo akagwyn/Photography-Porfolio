@@ -10,11 +10,11 @@
   opacity: 100%;
 
 
-&:active {
-  opacity: 100%;
-  transition-duration:0.2s;
-  transform: translate( 0rem, 0.9rem);
-}
+  &:active {
+    opacity: 100%;
+    transition-duration:0.2s;
+    transform: translate( 0rem, 0.9rem);
+  }
 }
 
 img:hover {
