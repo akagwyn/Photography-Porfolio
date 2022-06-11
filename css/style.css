@@ -51,6 +51,7 @@ img:hover {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 button {
@@ -62,28 +63,13 @@ button:active {
 }
 
 body {
-  /* background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
-  /* background: rgb(104,162,186);
-    background: linear-gradient(90deg, #68a2ba 0%, #c23179 50%, #b8313f 100%); */
-  background: #3e3919;
-  background: -webkit-gradient(linear, left bottom, left top, from(#3e3919), to(#ecd0b8));
-  background: linear-gradient(0deg, #3e3919 0%, #ecd0b8 100%);
-  background: #3f5966;
-  background: -webkit-gradient(linear, left top, right top, from(#3f5966), to(#ecd0b8));
-  background: linear-gradient(90deg, #3f5966 0%, #ecd0b8 100%);
-  background: #90cde4;
-  background: -webkit-gradient(linear, left top, right top, from(#90cde4), color-stop(50%, #90deaa), to(#e9bd99));
-  background: linear-gradient(90deg, #90cde4 0%, #90deaa 50%, #e9bd99 100%);
-  background-color: #ebebeb;
-  font-family: 'Bodoni Moda', serif;
+  background-color: #0e0e0e;
+  font-family: 'Noto Serif Display', serif;
 }
 
 nav {
   z-index: 90;
-  -webkit-box-shadow: 0px 5px 50px 23px rgba(0, 0, 0, 0.33);
-          box-shadow: 0px 5px 50px 23px rgba(0, 0, 0, 0.33);
-  background-color: #131313;
+  background-color: #0e0e0e;
   width: 100%;
   position: fixed;
   top: 0;
@@ -96,8 +82,8 @@ nav {
 }
 
 nav .navItem {
+  font-family: 'Noto Serif Display', serif;
   font-size: 2rem;
-  font-family: 'Bodoni Moda', serif;
   color: #ffffff;
   border: none;
   background: none;
@@ -108,10 +94,6 @@ nav .navItem {
 
 nav .navItem:active {
   color: #cfcfcf;
-}
-
-.xd {
-  overflow: hidden;
 }
 
 header {
@@ -128,15 +110,14 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 45vh 0vw 0 0vw;
+  margin: 38vh 0vw 0 0vw;
 }
 
 header .title {
-  font-family: 'Bodoni Moda', serif;
   font-size: 6rem;
-  color: #000000;
+  color: #ebebeb;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   margin: auto;
   padding: 0 0 .5rem 0;
 }
@@ -146,23 +127,23 @@ header .title b {
 }
 
 header hr {
-  border: 1px solid black;
+  border: 1px solid #ebebeb;
   height: 1px;
-  color: black;
 }
 
 header .subtitle {
   font-size: 2rem;
-  color: #000000;
-  font-weight: 700;
-  font-family: 'Bodoni Moda', serif;
+  color: #ebebeb;
+  font-weight: 500;
 }
 
 header .arrow {
   padding: 0.5rem;
-  margin: 35vh 0 10vh 0;
+  margin: 35vh 0 16vh 0;
   width: 5rem;
   height: 5rem;
+  -webkit-filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+          filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
 }
 
 .gridPhotos {
@@ -177,7 +158,6 @@ header .arrow {
       grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   gap: 0.5rem;
-  overflow: hidden;
 }
 
 .item {
@@ -199,11 +179,10 @@ img {
 }
 
 .contactBackground {
-  background-color: #131313;
+  background-color: #0e0e0e;
 }
 
 .contact {
-  font-family: 'Bodoni Moda', serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,8 +198,7 @@ img {
 }
 
 .contact .contactHeader {
-  font-family: 'Bodoni Moda', serif;
-  color: #ffffff;
+  color: #ebebeb;
   padding: 0rem 0 .5rem 0;
   font-size: 2em;
 }
@@ -230,15 +208,15 @@ img {
 }
 
 .contact .contactBodyName, .contact .contactBodyEmail, .contact .contactBodyMessage, .contact .contactBodyButton {
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Noto Serif Display', serif;
   padding: 1rem;
   width: 100%;
   border-left: none;
   border-top: none;
   border-right: none;
   border-width: 1px;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #ebebeb;
+  border-color: #ebebeb;
   background: none;
 }
 
@@ -252,7 +230,8 @@ img {
 }
 
 .contact .contactBodyButton {
-  color: #ffffff;
+  font-weight: 600;
+  color: #ebebeb;
   border: none;
 }
 
@@ -262,7 +241,7 @@ img {
 
 footer {
   height: 7rem;
-  background-color: #131313;
+  background-color: #0e0e0e;
   padding: 2rem;
 }
 
