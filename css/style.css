@@ -16,6 +16,64 @@
   }
 }
 
+@-webkit-keyframes shakeVertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes shakeVertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
 .arrow:hover {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -33,12 +91,46 @@
           transform: translate(0rem, 0.9rem);
 }
 
-img:hover {
+.item:hover {
+  background-color: black;
+}
+
+.item:hover img {
   -webkit-transition: .5s;
   transition: .5s;
   opacity: 60%;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.item:hover .text {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #ebebeb;
+}
+
+.item:active {
+  background-color: black;
+}
+
+.item:active img {
+  opacity: 80%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.text {
+  color: transparent;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
 }
 
 * {
@@ -165,6 +257,8 @@ header .arrow {
   height: 5rem;
   -webkit-filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
           filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+  -webkit-animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+          animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
 
 .gridPhotos {
@@ -179,15 +273,15 @@ header .arrow {
       grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   gap: 0.5rem;
+  overflow: hidden;
 }
 
 .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 img {
@@ -197,6 +291,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .contactBackground {
@@ -331,6 +426,9 @@ footer .ig {
   }
   .contact .contactBodyName, .contact .contactBodyEmail, .contact .contactBodyMessage, .contact .contactBodyButton {
     width: 90%;
+  }
+  .text {
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

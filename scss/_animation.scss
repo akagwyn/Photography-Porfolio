@@ -3,6 +3,35 @@
     100% {opacity: 1;}
 }
 
+@keyframes shakeVertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+            transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+            transform: translateY(-6.4px);
+  }
+}
+
 .arrow:hover {
   transition-duration: 0.5s;
   width: 4.5rem;
@@ -17,8 +46,25 @@
   }
 }
 
-img:hover {
-  transition: .5s;
-  opacity: 60%;
-  transform: scale(1.02);
+.item:hover {
+  background-color: black;
+  img {
+    transition: .5s;
+    opacity: 60%;
+    transform: scale(1.02);
+  }
+  .text {
+    transition: .5s;
+    color: $colorBlanco;
+  }
 }
+
+.item:active {
+  background-color: black;
+  img{
+    opacity: 80%;
+    transform: scale(1);
+  }
+}
+
+

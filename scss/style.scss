@@ -5,6 +5,7 @@
 @import "scrollbar";
     
 
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -94,6 +95,7 @@ header {
         width: 5rem;
         height: 5rem;
         filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+        animation: shakeVertical 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
     }
 }
 
@@ -108,14 +110,15 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows:auto;
     gap: 0.5rem;
+    overflow: hidden;
 }
 
 .item {
-    display: flex;
-    
+    position: relative;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    cursor: pointer;
 }
 
 img {
@@ -124,6 +127,7 @@ img {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    overflow: hidden;
 }
 
 
