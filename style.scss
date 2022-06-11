@@ -1,3 +1,4 @@
+@import "var";
 @import "animation";
 @import "txt";
 
@@ -31,9 +32,10 @@ body {
     background: rgb(63,89,102);
     background: linear-gradient(90deg, rgba(63,89,102,1) 0%, rgba(236,208,184,1) 100%);
     background: rgb(144,205,228);
-    background: linear-gradient(90deg, rgba(144,205,228,1) 0%, rgba(144,222,170,1) 50%, rgba(233,189,153,1) 100%);
-    background-color: #131313;
-    font-family: 'Playfair Display SC', serif;
+    background: linear-gradient(90deg, #90cde4 0%, #90deaa 50%, #e9bd99 100%);
+    background-color: #ebebeb;
+    font-family:'Bodoni Moda', serif;
+    
 }
 
 nav {
@@ -48,8 +50,8 @@ nav {
     justify-content: space-around;
     
     .navItem {
-        font-size: 1.9;
-        font-family: 'Playfair Display SC', serif;
+        font-size: 2rem;
+        font-family: 'Bodoni Moda', serif;
         color: #ffffff;
         border: none;
         background: none;
@@ -78,16 +80,16 @@ header {
     margin:45vh 0vw 0 0vw;
     
     .title {
-        
-        font-size: 4rem;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 6rem;
         color: #000000;
         text-align: center;
-        font-weight: 400;
+        font-weight: 600;
         margin: auto;
         padding: 0 0 .5rem 0;
 
         b {
-            font-weight: 700;
+            font-weight: 600;
         }
 
     }
@@ -99,9 +101,10 @@ header {
         
     }
     .subtitle {
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: #000000;
         font-weight: 700;
+        font-family:'Bodoni Moda', serif;
     }
     .arrow {
         padding: 0.5rem;
@@ -115,7 +118,7 @@ header {
 
 .gridPhotos{
     z-index: 1;
-    background-color: #131313;
+    background-color:$colorBlanco;
     box-sizing:border-box;
     padding: 0.5rem;
     display:grid;
@@ -149,17 +152,18 @@ img {
 }
 
 .contact {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Bodoni Moda', serif;
     display: flex;
     flex-direction: column;
     text-align: center;
     height: fit-content;
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0 0rem 0;
 
     .contactHeader {
-        font-family: 'Playfair Display SC', serif;
+        
+        font-family:'Bodoni Moda', serif;
         color: #ffffff;
-        font-weight: 700;
+        // font-weight: 400;
         padding: 0rem 0 .5rem 0;
         font-size: 2em;
         
@@ -170,7 +174,8 @@ img {
     }
     
     .contactBodyName, .contactBodyEmail, .contactBodyMessage, .contactBodyButton {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Bodoni Moda', serif;
+        // font-family: Arial, Helvetica, sans-serif;
         padding: 1rem;
         width: 100%;
         border-left: none;
@@ -205,10 +210,24 @@ img {
 
 // FOOTER
 
+
 footer{
+    height: 7rem;
     background-color: #131313;
-    padding: 1rem
+    padding: 2rem;
+    
+    .ig {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 3rem;
+        width: 3rem;
+        filter: invert(100%) sepia(7%) saturate(2%) hue-rotate(49deg) brightness(104%) contrast(100%);
+    }
 }
+
+
 
 @import "media";
 

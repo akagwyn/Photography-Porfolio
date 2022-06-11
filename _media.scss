@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
     
     .gridPhotos {
+        background-color: $colorBlanco;
         padding: 6rem 9rem 6rem 9rem;
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: auto;
@@ -37,7 +38,7 @@
     }
     
     .contactBackground {
-        padding-bottom: 5rem;
+        padding-bottom: 1rem;
     }
     .contact {
         width: 60rem;
