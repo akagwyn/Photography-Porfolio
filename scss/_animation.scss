@@ -32,6 +32,44 @@
   }
 }
 
+ @keyframes focusInContract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+ @keyframes focusInExpand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes textFocusIn {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
 .arrow:hover {
   transition-duration: 0.5s;
   width: 4.5rem;

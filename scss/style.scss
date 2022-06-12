@@ -12,6 +12,19 @@ html {
     scroll-padding-top: 5rem;
 }
 
+body {
+    position: relative;
+    background-color:$colorNegro;
+    // background: rgb(144,205,228);
+    // background: linear-gradient(90deg, #90cde4 0%, #90deaa 50%, #e9bd99 100%);
+    font-family: 'Noto Serif Display', serif;
+    // font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    cursor: pointer;
+}
+
 button {
     cursor: pointer;
 
@@ -20,59 +33,93 @@ button {
     }
 }
 
-
-body {
-    background-color:$colorNegro;
-    // background: rgb(144,205,228);
-    // background: linear-gradient(90deg, #90cde4 0%, #90deaa 50%, #e9bd99 100%);
-    font-family: 'Noto Serif Display', serif;
-    // font-family: 'Courier New', Courier, monospace;
-}
+//BARRA DE NAVEGACION
 
 nav {
-    z-index: 90;
+    z-index:2;
     background-color:$colorNegro;
     width: 100%;
     position: fixed;
     top: 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    
-    .navItem {
-        font-family: 'Noto Serif Display', serif;
-        font-size: 2rem;
-        color: #ffffff;
-        border: none;
-        background: none;
+
+    .menu {
+        position:relative;
+        list-style-type: none;
         text-align: center;
-        width:auto;
-        margin: 1rem 0 1rem 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .menuItem{
+        padding: .5rem 1rem .5rem 1rem;
+        color: $colorBlanco;
+    }
+
+    a {
+        font-size: 2rem;
+        text-decoration: none;
         
         &:active {
             color: #cfcfcf
         }
     }
-    
+
+    #dropDownMenu {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        background-color: $colorBlanco;
+        z-index:90;
+
+        &:hover {
+            display: block;
+        }
+
+        .dropDownMenuItem {
+            color: $colorNegro;
+            font-size: 2.5rem;
+            font-weight: 300;
+            padding: .5rem 0 .5rem 0;
+            display: block;
+
+            &:hover {
+                color: $colorBlanco;
+                background-color: $colorNegro;
+            }
+        }
+    }
+
+    #dropDownTrigger:hover + #dropDownMenu{
+        display: block;
+    }
+
+   
 }
 
 //HEADER 
 
 header { 
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position:fixed;
     animation: fadeIn 2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin: 38vh 0vw 0 0vw;
+    
     
     .title {
         font-size: 6rem;
         color: $colorBlanco;
         text-align: center;
         font-weight: 500;
-        margin: auto;
+        margin-top: 35vh;
         padding: 0 0 .5rem 0;
+        // animation: focusInExpand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+        // animation: text 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+        animation: focusInContract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 
         b {
             font-weight: 600;
@@ -88,21 +135,27 @@ header {
         font-size: 2rem;
         color: $colorBlanco;
         font-weight: 500;
+        animation: focusInContract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
     }
+
+
     .arrow {
-        padding: 0.5rem;
-        margin: 35vh 0 16vh 0;
+        background: none;
+        border: none;
+        // padding: 0.5rem;
+        margin: 30vh 0 5vh 0;
         width: 5rem;
         height: 5rem;
-        filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
         animation: shakeVertical 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        // animation: textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+        filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
     }
 }
 
 // GALERIA DE FOTOS
 
 .gridPhotos{
-    z-index: 1;
+    margin: 100vh 0 0 0;
     background-color:$colorBlanco;
     box-sizing:border-box;
     padding: 0.5rem;
@@ -136,6 +189,7 @@ img {
 .contactBackground {
     background-color: $colorNegro;
 }
+
 
 .contact {
     

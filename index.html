@@ -17,15 +17,26 @@
 <body>
 
     <nav>
-        
-        <button class="navItem">COLECCIONES</button>
-        <button onclick=(window.location.href)='#contact' class="navItem">CONTACTO</button>
+       <div class="menu">
+            <a id="dropDownTrigger" class="menuItem">COLECCIONES</a>
+            <div id="dropDownMenu">
+                <a class="dropDownMenuItem"href="">MASKED</a>
+                <a class="dropDownMenuItem"href="">Glow</a>
+                <a class="dropDownMenuItem"href="">Experimentalish</a>
+                <a class="dropDownMenuItem"href="">People</a>
+                <a class="dropDownMenuItem"href="">Acero y Concreto</a>
+                <a class="dropDownMenuItem"href="">Pink World</a>
+            </div>
+            <a class="menuItem" onclick=(window.location.href)='#contact' href="">CONTACTO</a>
+        </div> 
     </nav>
-    <header>
-        <div class="title"><b>IVXN</b><hr></div>
-        <p class="subtitle">FOTOGRAFIA</p>
-        <buttton onclick=(window.location.href)='#gridPhotos'><img src="/icons/downArrow2.svg" class="arrow"/></buttton>
+    <div class="">
+    <header id="header">
+        <h1 class="title"><b>IVXN</b><hr></h1>
+        <h2 class="subtitle focusInContract">FOTOGRAFIA</h2>
+        <button class="arrow" onclick=(window.location.href)='#gridPhotos'><img src="/icons/downArrow2.svg"/></button>
     </header>
+    </div>
     
     <div id="gridPhotos" class="gridPhotos">
         

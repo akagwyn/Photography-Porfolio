@@ -74,6 +74,88 @@
   }
 }
 
+@-webkit-keyframes focusInContract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focusInContract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes focusInExpand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focusInExpand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textFocusIn {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes textFocusIn {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 .arrow:hover {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -167,6 +249,16 @@ html {
   scroll-padding-top: 5rem;
 }
 
+body {
+  position: relative;
+  background-color: #0e0e0e;
+  font-family: 'Noto Serif Display', serif;
+}
+
+a {
+  cursor: pointer;
+}
+
 button {
   cursor: pointer;
 }
@@ -175,17 +267,17 @@ button:active {
   color: #cfcfcf;
 }
 
-body {
-  background-color: #0e0e0e;
-  font-family: 'Noto Serif Display', serif;
-}
-
 nav {
-  z-index: 90;
+  z-index: 2;
   background-color: #0e0e0e;
   width: 100%;
   position: fixed;
   top: 0;
+}
+
+nav .menu {
+  position: relative;
+  list-style-type: none;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,36 +286,61 @@ nav {
       justify-content: space-around;
 }
 
-nav .navItem {
-  font-family: 'Noto Serif Display', serif;
-  font-size: 2rem;
-  color: #ffffff;
-  border: none;
-  background: none;
-  text-align: center;
-  width: auto;
-  margin: 1rem 0 1rem 0;
+nav .menuItem {
+  padding: .5rem 1rem .5rem 1rem;
+  color: #ebebeb;
 }
 
-nav .navItem:active {
+nav a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+nav a:active {
   color: #cfcfcf;
 }
 
+nav #dropDownMenu {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  background-color: #ebebeb;
+  z-index: 90;
+}
+
+nav #dropDownMenu:hover {
+  display: block;
+}
+
+nav #dropDownMenu .dropDownMenuItem {
+  color: #0e0e0e;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: .5rem 0 .5rem 0;
+  display: block;
+}
+
+nav #dropDownMenu .dropDownMenuItem:hover {
+  color: #ebebeb;
+  background-color: #0e0e0e;
+}
+
+nav #dropDownTrigger:hover + #dropDownMenu {
+  display: block;
+}
+
 header {
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
-  margin: 38vh 0vw 0 0vw;
 }
 
 header .title {
@@ -231,8 +348,10 @@ header .title {
   color: #ebebeb;
   text-align: center;
   font-weight: 500;
-  margin: auto;
+  margin-top: 35vh;
   padding: 0 0 .5rem 0;
+  -webkit-animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+          animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
 header .title b {
@@ -248,21 +367,24 @@ header .subtitle {
   font-size: 2rem;
   color: #ebebeb;
   font-weight: 500;
+  -webkit-animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+          animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
 header .arrow {
-  padding: 0.5rem;
-  margin: 35vh 0 16vh 0;
+  background: none;
+  border: none;
+  margin: 30vh 0 5vh 0;
   width: 5rem;
   height: 5rem;
-  -webkit-filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
-          filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
   -webkit-animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
           animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  -webkit-filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+          filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
 }
 
 .gridPhotos {
-  z-index: 1;
+  margin: 100vh 0 0 0;
   background-color: #ebebeb;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -405,10 +527,20 @@ footer .ig {
     position: fixed;
     top: 0;
   }
-  nav .navItem {
+  nav .menuItem {
     width: auto;
-    font-size: 1.5vh;
-    margin: 1rem 2rem 1rem 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  nav #dropDownMenu {
+    text-align: left;
+  }
+  nav #dropDownMenu .dropDownMenuItem {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: .5rem 0 .5rem 0rem;
+    padding-left: 1rem;
   }
   .arrow {
     margin: 3vh 0 18vh 0;

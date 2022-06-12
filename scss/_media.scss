@@ -26,11 +26,25 @@
         position: fixed;
         top:0;
         
-        .navItem {
+        .menuItem {
             width: auto;
-            font-size: 1.5vh;
-            margin: 1rem 2rem 1rem 2rem;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 1rem 1rem 1rem 1rem;
         }
+
+        #dropDownMenu {
+            text-align: left;
+
+            .dropDownMenuItem {
+                font-size: 2rem;
+                font-weight: 400;
+                margin: .5rem 0 .5rem 0rem;
+                padding-left: 1rem;
+        }
+    }
+
+        
     }
     .arrow {
         margin: 3vh 0 18vh 0;
@@ -55,6 +69,7 @@
     .text {
         font-size: 3rem;
     }
+
     
 
 }
