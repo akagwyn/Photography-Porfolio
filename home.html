@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/imagehover.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>IVXN</title>
+    <link rel="icon" type="image/x-icon" href="/icons/X.png">
+</head>
+
+<body>
+    <nav>
+       <div class="menu">
+            <a id="dropDownTrigger" class="menuItem">COLECCIONES</a>
+            <div id="dropDownMenu">
+                <a class="dropDownMenuItem"href="/masked.html">MASKED</a>
+                <a class="dropDownMenuItem"href="">Glow</a>
+                <a class="dropDownMenuItem"href="">Experimentalish</a>
+                <a class="dropDownMenuItem"href="">People</a>
+                <a class="dropDownMenuItem"href="">Acero y Concreto</a>
+                <a class="dropDownMenuItem"href="">Pink World</a>
+            </div>
+            <a class="menuItem" onclick=(window.location.href)='#contact' href="#contact">CONTACTO</a>
+        </div> 
+    </nav>
+    <header id="header">
+        <h1 class="title"><b>IVXN</b><hr></h1>
+        <h2 class="subtitle focusInContract">FOTOGRAFIA</h2>
+        <button class="arrow" onclick=(window.location.href)='#gridPhotos'><img src="/icons/downArrow2.svg"/></button>
+    </header>
+    
+    <div id="gridPhotos" class="gridPhotos">
+        
+        <div class="item twoColumn" >
+            <a><img class="imageGrid" src="/images/rosa1.jpg" alt="Pink World"></a>
+            <p class="text">Pink World</p> 
+        </div>
+        <div class="item">
+            <img class="imageGrid" src="/images/majko.jpg" alt="People">
+            <p class="text">People</p> 
+        </div>
+        <div class="item twoRow twoColumn">
+            <img class="imageGrid" src="/images/aeropuertoAvion.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item twoRow">
+            <img class="imageGrid" src="/images/ediRed.jpg" alt="Experimentalish">
+            <p class="text">Experimentalish</p> 
+        </div>
+        <div class="item">
+            <img class="imageGrid" src="/images/edi5.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item twoRow twoColumn">
+            <a href="/masked.html"><img class="imageGrid" src="/images/dunas.jpg" alt="MASKED"></a>
+            <p class="text">MASKED</p>
+        </div>
+        <div class="item threeRow">
+            <img class="imageGrid" src="/images/pasos2.jpg" alt="People">
+            <p class="text">People</p> 
+        </div>
+        <div class="item twoRow twoColumn">
+            <img class="imageGrid" src="/images/barco.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item">
+            <img class="imageGrid" src="/images/maskedRetrato.jpg" alt="MASKED">
+            <p class="text">MASKED</p>
+        </div>
+        <div class="item twoRow">
+            <img class="imageGrid" src="/images/fasoAbajo.jpg" alt="Steel and Concrete">
+            <p class="text">Steel and Concrete</p> 
+        </div>
+        <div class="item">
+            <img class="imageGrid" src="/images/verde.jpg" alt="Steel and Concrete">
+            <p class="text">Steel and Concrete</p> 
+        </div>
+        <div class="item twoRow">
+            <img class="imageGrid" src="/images/expRojoAbajo.jpg" alt="Experimentalish">
+            <p class="text">Experimentalish</p> 
+        </div>
+        <div class="item twoColumn threeRow">
+            <img class="imageGrid" src="/images/ediRedPunta.jpg" alt="Experimentalish">
+            <p class="text">Experimentalish</p> 
+        </div>
+        <div class="item twoRow">
+            <img class="imageGrid" src="/images/escalera.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item twoColumn">
+            <img class="imageGrid" src="/images/cbaMont.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item">
+            <img class="imageGrid" src="/images/playa1.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item twoColumn">
+            <img class="imageGrid" src="/images/amanecerPlaya.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        <div class="item twoColumn">
+            <img class="imageGrid" src="/images/aca.jpg" alt="Glow">
+            <p class="text">Glow</p> 
+        </div>
+        
+    </div>
+    <div id="contact" class="contactBackground">
+        <div class="contact">
+            <div class="contactHeader">CONTACTO</div>
+            <form class="contactBody">
+                <input type="name" class="contactBodyName" placeholder="Nombre" />
+                <input type="email" class="contactBodyEmail" placeholder="Email" />
+                <textarea type="text" class="contactBodyMessage" placeholder="Mensaje"></textarea>
+                <button class="contactBodyButton"><b>ENVIAR</b></button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.instagram.com/ivxnbelike/" target="_blank"><img src="/icons/igLogo.svg" alt="" class="ig"></a>
+    </footer>
+    <script src="/app.js"></script>
+    
+</body>
+</html>

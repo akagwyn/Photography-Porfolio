@@ -3,13 +3,15 @@
 @import "txt";
 @import "reset";
 @import "scrollbar";
+@import "masked";
+@import "mediaMasked";
     
 
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 3.6rem;
 }
 
 body {
@@ -17,8 +19,7 @@ body {
     background-color:$colorNegro;
     // background: rgb(144,205,228);
     // background: linear-gradient(90deg, #90cde4 0%, #90deaa 50%, #e9bd99 100%);
-    font-family: 'Noto Serif Display', serif;
-    // font-family: 'Courier New', Courier, monospace;
+    font-family: 'Playfair Display', serif;
 }
 
 a {
@@ -64,6 +65,8 @@ nav {
         }
     }
 
+    //MENU (COLECCIONES)
+
     #dropDownMenu {
         width: 100%;
         display: none;
@@ -79,9 +82,9 @@ nav {
 
         .dropDownMenuItem {
             color: $colorNegro;
-            font-size: 2.5rem;
-            font-weight: 300;
-            padding: .5rem 0 .5rem 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding: .6rem 0 .6rem 0;
             display: block;
 
             &:hover {
@@ -100,7 +103,7 @@ nav {
 
 //HEADER 
 
-header { 
+#header { 
     z-index: -1;
     top: 50%;
     left: 50%;
@@ -111,6 +114,7 @@ header {
     
     
     .title {
+        font-family: 'Noto Serif Display', serif;
         font-size: 6rem;
         color: $colorBlanco;
         text-align: center;
@@ -174,7 +178,7 @@ header {
     cursor: pointer;
 }
 
-img {
+.imageGrid {
     display: block;
     width: 100%;
     height: 100%;
@@ -214,7 +218,7 @@ img {
     }
     
     .contactBodyName, .contactBodyEmail, .contactBodyMessage, .contactBodyButton {
-        font-family: 'Noto Serif Display', serif;
+        font-family: 'Playfair Display', serif;
         padding: 1rem;
         width: 100%;
         border-left: none;

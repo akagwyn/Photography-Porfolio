@@ -1,0 +1,51 @@
+.maskedHeader {
+    z-index: -2;
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    .maskedBackground{
+        opacity: 70%;
+        height: 100vh;
+        // background-size:cover ;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .maskedTitle {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Noto Serif Display', serif;
+        font-size: 6rem;
+        color:$colorBlanco;
+        text-align: center;
+        font-weight: 500;
+        animation: focusInContract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+    
+        hr {
+            border: 1px solid $colorBlanco;
+            height: 1px;
+        }
+        b {
+            font-weight: 600;
+        }
+    
+    }
+    .maskedArrow {
+        margin-top: 80vh;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        animation: shakeVertical 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        // animation: textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+        filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+    }
+    
+}

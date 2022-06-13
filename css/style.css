@@ -243,16 +243,85 @@
   background-color: #a0a0a0;
 }
 
+.maskedHeader {
+  z-index: -2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.maskedHeader .maskedBackground {
+  opacity: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.maskedHeader .maskedTitle {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'Noto Serif Display', serif;
+  font-size: 6rem;
+  color: #ebebeb;
+  text-align: center;
+  font-weight: 500;
+  -webkit-animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+          animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+.maskedHeader .maskedTitle hr {
+  border: 1px solid #ebebeb;
+  height: 1px;
+}
+
+.maskedHeader .maskedTitle b {
+  font-weight: 600;
+}
+
+.maskedHeader .maskedArrow {
+  margin-top: 80vh;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+          animation: shakeVertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  -webkit-filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+          filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+}
+
+@media (min-width: 768px) {
+  .maskedHeader .maskedBackground {
+    opacity: 70%;
+    width: 100vw;
+    height: auto;
+    top: 20%;
+  }
+  .maskedHeader .maskedTitle {
+    font-size: 7.5rem;
+    top: 20%;
+  }
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 3.6rem;
 }
 
 body {
   position: relative;
   background-color: #0e0e0e;
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 a {
@@ -316,9 +385,9 @@ nav #dropDownMenu:hover {
 
 nav #dropDownMenu .dropDownMenuItem {
   color: #0e0e0e;
-  font-size: 2.5rem;
-  font-weight: 300;
-  padding: .5rem 0 .5rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: .6rem 0 .6rem 0;
   display: block;
 }
 
@@ -331,7 +400,7 @@ nav #dropDownTrigger:hover + #dropDownMenu {
   display: block;
 }
 
-header {
+#header {
   z-index: -1;
   top: 50%;
   left: 50%;
@@ -343,7 +412,8 @@ header {
   text-align: center;
 }
 
-header .title {
+#header .title {
+  font-family: 'Noto Serif Display', serif;
   font-size: 6rem;
   color: #ebebeb;
   text-align: center;
@@ -354,16 +424,16 @@ header .title {
           animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
-header .title b {
+#header .title b {
   font-weight: 600;
 }
 
-header hr {
+#header hr {
   border: 1px solid #ebebeb;
   height: 1px;
 }
 
-header .subtitle {
+#header .subtitle {
   font-size: 2rem;
   color: #ebebeb;
   font-weight: 500;
@@ -371,7 +441,7 @@ header .subtitle {
           animation: focusInContract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
-header .arrow {
+#header .arrow {
   background: none;
   border: none;
   margin: 30vh 0 5vh 0;
@@ -406,7 +476,7 @@ header .arrow {
   cursor: pointer;
 }
 
-img {
+.imageGrid {
   display: block;
   width: 100%;
   height: 100%;
@@ -446,7 +516,7 @@ img {
 }
 
 .contact .contactBodyName, .contact .contactBodyEmail, .contact .contactBodyMessage, .contact .contactBodyButton {
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'Playfair Display', serif;
   padding: 1rem;
   width: 100%;
   border-left: none;
@@ -538,7 +608,7 @@ footer .ig {
   }
   nav #dropDownMenu .dropDownMenuItem {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     margin: .5rem 0 .5rem 0rem;
     padding-left: 1rem;
   }
