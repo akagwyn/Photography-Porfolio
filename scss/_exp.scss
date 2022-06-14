@@ -1,0 +1,62 @@
+.expHeader {
+    position: relative;
+    z-index: -2;
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    .expBackground{
+        opacity: 60%;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .expTitle {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Noto Serif Display', serif;
+        color: $colorBlanco;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 500;
+        animation: focusInContract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+    
+        .hrNegro {
+            border: 1px solid $colorBlanco;
+            height: 1px;
+        }
+    }
+    .expArrow {
+        margin-top: 80vh;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        animation: shakeVertical 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        // animation: textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+        filter: invert(99%) sepia(26%) saturate(14%) hue-rotate(139deg) brightness(104%) contrast(101%);
+    }
+    
+}
+
+.expGridPhotos{
+    margin: 100vh 0 0 0;
+    background-color:$colorBlanco;
+    box-sizing:border-box;
+    padding: 0.5rem;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows:auto;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+.threeColumn {
+    grid-column: span 3;
+}

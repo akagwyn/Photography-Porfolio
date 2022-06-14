@@ -5,7 +5,9 @@
 @import "scrollbar";
 @import "masked";
 @import "mediaMasked";
-    
+@import "exp";
+@import "mediaexp";
+
 
 
 html {
@@ -37,7 +39,7 @@ button {
 //BARRA DE NAVEGACION
 
 nav {
-    z-index:2;
+    z-index:99;
     background-color:$colorNegro;
     width: 100%;
     position: fixed;
@@ -107,6 +109,7 @@ nav {
     z-index: -1;
     top: 50%;
     left: 50%;
+    margin-top: 10vh;
     transform: translate(-50%,-50%);
     position:fixed;
     animation: fadeIn 2s;
@@ -119,7 +122,7 @@ nav {
         color: $colorBlanco;
         text-align: center;
         font-weight: 500;
-        margin-top: 35vh;
+        // margin-top: 35vh;
         padding: 0 0 .5rem 0;
         // animation: focusInExpand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
         // animation: text 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
@@ -128,8 +131,10 @@ nav {
         b {
             font-weight: 600;
         }
-
+        
     }
+
+    
     
     hr {
         border: 1px solid $colorBlanco;

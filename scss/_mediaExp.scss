@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+    
+    .expHeader {
+
+        .expBackground{
+            opacity: 70%;
+            width: 100vw;
+            height: auto;
+            
+        }
+
+        .expTitle {
+            font-size: 7.5rem;
+            // top: 20%;
+        }
+    }
+
+    .expGridPhotos {
+        background-color: $colorNegro;
+        padding: 6rem 9rem 6rem 9rem;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 45rem;
+        gap: 0.9rem;
+    }
+}

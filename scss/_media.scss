@@ -10,7 +10,11 @@
     .twoColumn {
         grid-column: span 2;
     }
-    
+
+    .sixColumn {
+        grid-column: span 6;
+    }
+
     .threeRow {
         grid-row: span 3;
     }
